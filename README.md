@@ -2,8 +2,8 @@
 
 A currency exchange rate tracker with a free tier and a paid tier. Free users get rates under a minute old and an honest freshness label. Paid users get rates under 2 seconds old plus 30-day history.
 
-- **Frontend:** _deploy URL goes here_
-- **Backend:** _deploy URL goes here_ (`GET /api/rates?base=USD&tier=free`)
+- **Frontend:** https://realtime-exchange-rate-tracker.vercel.app
+- **Backend:** https://realtime-exchange-rate-tracker.fastapicloud.dev ([try it](https://realtime-exchange-rate-tracker.fastapicloud.dev/api/rates?base=USD&tier=free))
 
 The reasoning behind every choice is in [decisions.md](decisions.md).
 

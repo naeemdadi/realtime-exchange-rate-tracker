@@ -39,7 +39,10 @@ def load_settings() -> Settings:
     return Settings(
         coinbase_url=os.getenv("COINBASE_URL", defaults.coinbase_url),
         open_er_api_url=os.getenv("OPEN_ER_API_URL", defaults.open_er_api_url),
-        allowed_origins=origins.split(",") if origins else defaults.allowed_origins,
+        # Browsers send Origin without a trailing slash, so normalise pasted URLs to match.
+        allowed_origins=(
+            [o.strip().rstrip("/") for o in origins.split(",")] if origins else defaults.allowed_origins
+        ),
         free_fallback_cap=int(os.getenv("FREE_FALLBACK_CAP", defaults.free_fallback_cap)),
         free_verify_cap=int(os.getenv("FREE_VERIFY_CAP", defaults.free_verify_cap)),
     )
