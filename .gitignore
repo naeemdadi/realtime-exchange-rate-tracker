@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+.fastapicloud/
+.vercel/
+requirements.txt
+MY_APPROACH.md
